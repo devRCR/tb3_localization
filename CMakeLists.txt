@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(subpub_example)
+project(tb3_localization)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
@@ -205,17 +205,17 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(publisher src/Publisher.cpp)
-target_link_libraries(publisher ${catkin_LIBRARIES})
+add_executable(localization_callback src/Localization_callback.cpp)
+target_link_libraries(localization_callback ${catkin_LIBRARIES})
 
-add_executable(subscriber src/Subscriber.cpp)
-target_link_libraries(subscriber ${catkin_LIBRARIES})
+add_executable(rotate_robot src/Rotate_robot.cpp)
+target_link_libraries(rotate_robot ${catkin_LIBRARIES})
 
-add_executable(class_pub src/class_publisher.cpp)
-target_link_libraries(class_pub ${catkin_LIBRARIES})
+#add_executable(class_pub src/class_publisher.cpp)
+#target_link_libraries(class_pub ${catkin_LIBRARIES})
 
-add_executable(class_sub src/class_subscriber.cpp)
-target_link_libraries(class_sub ${catkin_LIBRARIES})
+#add_executable(class_sub src/class_subscriber.cpp)
+#target_link_libraries(class_sub ${catkin_LIBRARIES})
 
-add_executable(class_pubsub src/class_pubsub.cpp)
-target_link_libraries(class_pubsub ${catkin_LIBRARIES})
+#add_executable(class_pubsub src/class_pubsub.cpp)
+#target_link_libraries(class_pubsub ${catkin_LIBRARIES})
